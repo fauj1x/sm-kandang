@@ -1,0 +1,89 @@
+.wave,
+.wave2,
+.wave3 {
+  will-change: transform, opacity;
+}
+
+/* Gelombang pertama */
+.wave {
+  animation: moveWave 8s ease-in-out infinite alternate;
+  opacity: 0.7;
+}
+
+/* Gelombang kedua */
+.wave2 {
+  animation: moveWave2 10s ease-in-out infinite alternate;
+  opacity: 0.5;
+}
+
+/* Gelombang ketiga */
+.wave3 {
+  animation: moveWave3 12s ease-in-out infinite alternate;
+  opacity: 0.3;
+}
+
+/* Keyframes halus bolak-balik */
+@keyframes moveWave {
+  0% {
+    transform: translateX(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0.6;
+  }
+}
+
+@keyframes moveWave2 {
+  0% {
+    transform: translateX(0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateX(-40%);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateX(-80%);
+    opacity: 0.4;
+  }
+}
+
+@keyframes moveWave3 {
+  0% {
+    transform: translateX(0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateX(-60%);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(-120%);
+    opacity: 0.3;
+  }
+}
+
+/* Efek berdenyut lembut */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 3s ease-in-out infinite;
+}
